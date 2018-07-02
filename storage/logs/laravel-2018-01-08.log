@@ -1,0 +1,146 @@
+[2018-01-08 11:21:09] local.ERROR: ErrorException: Undefined index: HTTP_RAW_POST_DATA in /var/www/blog/app/Http/Controllers/WeChatController.php:20
+Stack trace:
+#0 /var/www/blog/app/Http/Controllers/WeChatController.php(20): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined index...', '/var/www/blog/a...', 20, Array)
+#1 [internal function]: App\Http\Controllers\WeChatController->index(Object(Illuminate\Http\Request))
+#2 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#3 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('index', Array)
+#4 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\WeChatController), 'index')
+#5 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#6 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#7 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#8 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#11 /var/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 /var/www/blog/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 /var/www/blog/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#19 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 /var/www/blog/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#23 /var/www/blog/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#28 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#29 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#30 /var/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#31 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#32 /var/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 /var/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#37 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#38 /var/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#39 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#40 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#41 /var/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#42 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#43 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#44 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#45 /var/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#46 /var/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#47 /var/www/blog/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#48 {main}  
+[2018-01-08 11:21:51] local.DEBUG: []  
+[2018-01-08 11:22:19] local.DEBUG: []  
+[2018-01-08 15:43:48] local.DEBUG: {"signature":"e3741358d3cffe3ac1714b390a672dab89f75ff2","echostr":"3364708448858221372","timestamp":"1515397428","nonce":"75783800"}  
+[2018-01-08 15:44:48] local.DEBUG: []  
+[2018-01-08 16:13:48] local.DEBUG: []  
+[2018-01-08 16:14:27] local.DEBUG: []  
+[2018-01-08 16:14:29] local.DEBUG: []  
+[2018-01-08 16:19:53] local.DEBUG: 123123  
+[2018-01-08 16:19:53] local.DEBUG: []  
+[2018-01-08 16:54:36] local.DEBUG: {"signature":"ddd2ecd6a6c85fc4fbb12229d0b6f38fc3f6b288","timestamp":"1515401676","nonce":"777376151","openid":"oUy220QD0qpujapZvGwBX45tUUkM"}  
+[2018-01-08 16:54:50] local.DEBUG: []  
+[2018-01-08 16:54:52] local.DEBUG: []  
+[2018-01-08 16:55:09] local.DEBUG: {"signature":"87b7a47b98f0566c72b4a4b6f46519b6a4fab6d3","timestamp":"1515401709","nonce":"2111283271","openid":"oUy220QD0qpujapZvGwBX45tUUkM"}  
+[2018-01-08 16:55:48] local.DEBUG: {"signature":"7d652d7e704b81579f5b8239813d075bdb2a48fd","timestamp":"1515401748","nonce":"1271747888","openid":"oUy220QD0qpujapZvGwBX45tUUkM"}  
+[2018-01-08 16:57:27] local.DEBUG: {"signature":"12f3e7523073efb1a5af1ea74a3271c8224a9aeb","timestamp":"1515401847","nonce":"838375294","openid":"oUy220QD0qpujapZvGwBX45tUUkM"}  
+[2018-01-08 17:00:02] local.ERROR: ErrorException: Undefined index: HTTP_RAW_POST_DATA in /var/www/blog/app/Http/Controllers/WeChatController.php:19
+Stack trace:
+#0 /var/www/blog/app/Http/Controllers/WeChatController.php(19): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined index...', '/var/www/blog/a...', 19, Array)
+#1 [internal function]: App\Http\Controllers\WeChatController->index(Object(Illuminate\Http\Request))
+#2 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(55): call_user_func_array(Array, Array)
+#3 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): Illuminate\Routing\Controller->callAction('index', Array)
+#4 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Route.php(203): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\WeChatController), 'index')
+#5 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Route.php(160): Illuminate\Routing\Route->runController()
+#6 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Router.php(572): Illuminate\Routing\Route->run()
+#7 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#8 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#11 /var/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 /var/www/blog/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 /var/www/blog/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#19 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 /var/www/blog/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#23 /var/www/blog/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Router.php(574): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#28 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Router.php(533): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#29 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Router.php(511): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#30 /var/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#31 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#32 /var/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 /var/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#37 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#38 /var/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#39 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#40 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#41 /var/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#42 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#43 /var/www/blog/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#44 /var/www/blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#45 /var/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#46 /var/www/blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#47 /var/www/blog/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#48 {main}  
+[2018-01-08 17:13:48] local.DEBUG: <xml><ToUserName><![CDATA[gh_077ec0ca5124]]></ToUserName>
+<FromUserName><![CDATA[oUy220QD0qpujapZvGwBX45tUUkM]]></FromUserName>
+<CreateTime>1515402828</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[在]]></Content>
+<MsgId>6508605586987775263</MsgId>
+</xml>  
+[2018-01-08 18:43:15] local.DEBUG: <xml><ToUserName><![CDATA[gh_077ec0ca5124]]></ToUserName>
+<FromUserName><![CDATA[oUy220QD0qpujapZvGwBX45tUUkM]]></FromUserName>
+<CreateTime>1515408195</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[明天需要调整]]></Content>
+<MsgId>6508628638077254923</MsgId>
+</xml>  
+[2018-01-08 18:43:15] local.DEBUG: <xml><ToUserName><![CDATA[gh_077ec0ca5124]]></ToUserName>
+<FromUserName><![CDATA[oUy220QD0qpujapZvGwBX45tUUkM]]></FromUserName>
+<CreateTime>1515408195</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[这个参数到curl里面]]></Content>
+<MsgId>6508628638077254924</MsgId>
+</xml>  
+[2018-01-08 18:43:16] local.DEBUG: <xml><ToUserName><![CDATA[gh_077ec0ca5124]]></ToUserName>
+<FromUserName><![CDATA[oUy220QD0qpujapZvGwBX45tUUkM]]></FromUserName>
+<CreateTime>1515408195</CreateTime>
+<MsgType><![CDATA[image]]></MsgType>
+<PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/gaM4tmibsEJXX5ibbzia9ebhiaxHPkSCaicEibkwwojHch5eecMHA0AM2lQOAeaUKNleNOoibrBp3belupJrkV9rycRlA/0]]></PicUrl>
+<MsgId>6508628638077254925</MsgId>
+<MediaId><![CDATA[Sl0qeC1bvOJdcUBIE5-0aLNyVO2T6bxmbAPxDWBAzb7ELtFsG1U_JuT7LwWuCxRw]]></MediaId>
+</xml>  
