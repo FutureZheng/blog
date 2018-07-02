@@ -53,6 +53,10 @@ Route::group(['namespace' => 'Home'], function (){
  */
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function (){
 
+
+    Route::get('/', 'LoginController@index');           //登录的首页
+
+
     Route::group(['prefix' => 'login'], function (){
 
         Route::get('index', 'LoginController@index');           //登录的首页
